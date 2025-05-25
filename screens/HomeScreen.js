@@ -20,6 +20,8 @@ const HomeScreen = ({ navigation }) => {
       ingredients: '김치, 돼지고기, 두부, 파',
       time: '30분',
       difficulty: '쉬움',
+      
+
     },
     {
       id: '2',
@@ -27,6 +29,7 @@ const HomeScreen = ({ navigation }) => {
       ingredients: '계란, 밥, 양파, 당근',
       time: '15분',
       difficulty: '쉬움',
+      
     },
     {
       id: '3',
