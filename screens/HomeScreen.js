@@ -21,7 +21,12 @@ const HomeScreen = ({ navigation }) => {
       ingredients: '김치, 돼지고기, 두부, 파',
       time: '30분',
       difficulty: '쉬움',
+<<<<<<< HEAD
       image: require('../assets/kimchistew.jpg'),
+=======
+      
+
+>>>>>>> b07c73a0de5e59b4feb3931c0ecf65156a092692
     },
     {
       id: '2',
@@ -29,7 +34,11 @@ const HomeScreen = ({ navigation }) => {
       ingredients: '계란, 밥, 양파, 당근',
       time: '15분',
       difficulty: '쉬움',
+<<<<<<< HEAD
       image: require('../assets/eggrice.jpeg'),
+=======
+      
+>>>>>>> b07c73a0de5e59b4feb3931c0ecf65156a092692
     },
     {
       id: '3',
