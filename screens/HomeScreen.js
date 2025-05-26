@@ -6,7 +6,8 @@ import {
   TouchableOpacity, 
   ScrollView,
   SafeAreaView,
-  FlatList
+  FlatList,
+  Image
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
@@ -20,6 +21,7 @@ const HomeScreen = ({ navigation }) => {
       ingredients: '김치, 돼지고기, 두부, 파',
       time: '30분',
       difficulty: '쉬움',
+      image: require('../assets/kimchistew.jpg'),
     },
     {
       id: '2',
@@ -27,6 +29,7 @@ const HomeScreen = ({ navigation }) => {
       ingredients: '계란, 밥, 양파, 당근',
       time: '15분',
       difficulty: '쉬움',
+      image: require('../assets/eggrice.jpeg'),
     },
     {
       id: '3',
@@ -34,6 +37,7 @@ const HomeScreen = ({ navigation }) => {
       ingredients: '된장, 두부, 감자, 양파, 파',
       time: '25분',
       difficulty: '쉬움',
+      image: require('../assets/beanstew.jpg'),
     },
     {
       id: '4',
@@ -41,6 +45,7 @@ const HomeScreen = ({ navigation }) => {
       ingredients: '시금치, 마늘, 참기름',
       time: '10분',
       difficulty: '쉬움',
+      image: require('../assets/sigumchi.jpg'),
     }
   ];
 
@@ -59,6 +64,12 @@ const HomeScreen = ({ navigation }) => {
       style={styles.recipeCard}
       onPress={() => navigation.navigate('RecipeDetail', { recipeName: item.title })}
     >
+      {/* 로컬 이미지 추가 */}
+    <Image 
+      source={item.image} 
+      style={styles.recipeImage}
+      resizeMode="cover"
+      />
       <View style={styles.recipePlaceholder}>
         <Ionicons name="restaurant-outline" size={24} color="#ccc" />
       </View>
@@ -274,13 +285,13 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 2,
   },
-  recipePlaceholder: {
+  /*recipePlaceholder: {
     width: '100%',
     height: 150,
     backgroundColor: '#f0f0f0',
     justifyContent: 'center',
     alignItems: 'center',
-  },
+  },*/
   recipeInfo: {
     padding: 15,
   },
@@ -306,6 +317,11 @@ const styles = StyleSheet.create({
   recipeDifficulty: {
     fontSize: 14,
     color: '#666',
+  },
+  recipeImage: {
+    width: '100%',
+    height: 150,
+    backgroundColor: '#f0f0f0',
   },
 });
 
